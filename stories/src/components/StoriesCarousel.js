@@ -7,18 +7,17 @@ const initialIndex = 0
 function Carousel() {
   const [index, setIndex] = React.useState(initialIndex);
 
-  // // This code will cyclye thru the carousel every 3.5 seconds
-
-  // React.useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     if(index === images.length -1) {
-  //       setIndex(initialIndex)
-  //     } else {
-  //       setIndex(index + 1)
-  //     } 
-  //   }, 3500)
-  //   return () => clearInterval(interval)
-  //   }, [index])
+  // This code will cyclye thru the carousel every 3.5 seconds
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      if(index === images.length -1) {
+        setIndex(initialIndex)
+      } else {
+        setIndex(index + 1)
+      } 
+    }, 3500)
+    return () => clearInterval(interval)
+    }, [index])
 
   return (
      //Start of the Carousel
