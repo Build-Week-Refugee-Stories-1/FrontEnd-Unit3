@@ -1,6 +1,6 @@
 import React from "react";
 import { PubContext } from "../contexts/PubStories";
-import { Grid, Card, Container, Image, Icon, } from "semantic-ui-react";
+import { Grid, Card, Container, Image, Icon } from "semantic-ui-react";
 
 const Stories = props => {
   const story = React.useContext(PubContext);
@@ -8,6 +8,7 @@ const Stories = props => {
   return (
     <>
       <Container>
+        <h1>Refugee Stories</h1>
         <Card fluid>
           <Card.Content>
             <Card.Header>Refugee Stories</Card.Header>
@@ -18,6 +19,7 @@ const Stories = props => {
                 {story.map(stuff => (
                   <Grid.Column key={stuff.id}>
                     <Card color="black">
+                      <Image src={stuff.image} />
                       <Card.Content>
                         <Card.Header>{stuff.name}</Card.Header>
                       </Card.Content>
