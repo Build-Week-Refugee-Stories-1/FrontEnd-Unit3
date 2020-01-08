@@ -11,7 +11,7 @@ const Stories = props => {
         <h1>Refugee Stories</h1>
         <Card fluid>
           <Card.Content>
-            <Card.Header>Refugee Stories</Card.Header>
+            <Card.Header>Recently Submitted Stories</Card.Header>
           </Card.Content>
           <Card.Content>
             <Grid columns={4}>
@@ -19,7 +19,7 @@ const Stories = props => {
                 {story.map(stuff => (
                   <Grid.Column key={stuff.id}>
                     <Card color="black">
-                      <Image src={stuff.image} />
+                      <Image src={stuff.image} wrapped ui={false} />
                       <Card.Content>
                         <Card.Header>{stuff.name}</Card.Header>
                       </Card.Content>
@@ -29,7 +29,7 @@ const Stories = props => {
                       </Card.Content>
                       <br />
                       <Card.Content>
-                        <Card.Header>{stuff.quote}</Card.Header>
+                        <Card.Header>"{stuff.quote}"</Card.Header>
                       </Card.Content>
                     </Card>
                   </Grid.Column>

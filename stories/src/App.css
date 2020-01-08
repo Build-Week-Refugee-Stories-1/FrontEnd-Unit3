@@ -54,12 +54,15 @@ body {
   width: 100%;
   /* padding: 20px; */
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   border-radius: 5px;
   box-shadow: 0 1px 6px -2px #000;
   background-color: #FFF;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
   margin-top: 50px;
+  justify-content: center;
+  align-items: center;
 }
 
 .card img {
@@ -67,4 +70,11 @@ body {
   height: 150px;
   border-radius: 3px;
   margin-right: 20px;
+  padding-top: 10px;
+}
+
+.card .header {
+  font-size: large;
+  text-transform: capitalize;
+  color: navy;
 }
