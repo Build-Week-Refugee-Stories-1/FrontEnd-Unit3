@@ -78,3 +78,9 @@ body {
   text-transform: capitalize;
   color: navy;
 }
+
+.submit-card {
+  width: 80%;
+  height: 800px;
+  
+}
