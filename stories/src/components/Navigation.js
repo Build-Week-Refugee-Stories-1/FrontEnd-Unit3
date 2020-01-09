@@ -7,7 +7,7 @@ const Navigation = () => {
   return (
     <nav>
       <div className="nav-links">
-        <Link to="/HomePage">Home</Link>
+        <Link to="/HomePage">Homee</Link>
         <Link to="/Stories">Stories</Link>
         <Link to="/Login">Login</Link>
       </div>
