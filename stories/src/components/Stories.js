@@ -45,10 +45,3 @@ const Stories = props => {
 
 export default Stories;
 
-// {story.map(stuff => (
-//   <div>
-//     <p>{stuff.name}</p>
-//     <p>{stuff.story}</p>
-//     <p>{stuff.quote}</p>
-//   </div>
-// ))}
