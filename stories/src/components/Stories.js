@@ -1,6 +1,6 @@
 import React from "react";
 import { PubContext } from "../contexts/PubStories";
-import { Grid, Card, Container, Image, Icon } from "semantic-ui-react";
+import { Grid, Card, Container, Image } from "semantic-ui-react";
 
 const Stories = props => {
   const story = React.useContext(PubContext);

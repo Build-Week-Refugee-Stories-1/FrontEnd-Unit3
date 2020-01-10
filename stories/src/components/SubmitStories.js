@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios";
-import { Grid, Card, Container, Image } from "semantic-ui-react";
+import {  Card, Container  } from "semantic-ui-react";
 import { axiosWithAuth } from "../axiosWithAuth";
 
 const SubmitStories = props => {
