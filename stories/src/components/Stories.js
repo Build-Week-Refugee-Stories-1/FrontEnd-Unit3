@@ -1,5 +1,5 @@
 import React from "react";
-import { PubContext } from "./contexts/PubStories";
+import { PubContext } from "../contexts/PubStories";
 import { Grid, Card, Container, Image } from "semantic-ui-react";
 
 const Stories = props => {
@@ -44,4 +44,5 @@ const Stories = props => {
 };
 
 export default Stories;
+
 

@@ -15,29 +15,32 @@ function Carousel() {
       } else {
         setIndex(index + 1)
       } 
-    }, 3500)
+    }, 5500)
     return () => clearInterval(interval)
     }, [index])
 
   return (
      //Start of the Carousel
-     <Gallery
-     style={{
-       //add styles like height, width, or opacity here for the pictures or background. 
-       height: '100vh',
-       width: '100vw',
-       background: 'black'
-     }}
-     index={index}
-     onRequestChange={i => {
-       setIndex(i);
-     }}
-     >
-      {/* test images - can be changed */}
-     {images.map(image => (
-       <GalleryImage objectFit="contain" src={image} />
-     ))}
-   </Gallery>
+     <>
+      <h1>Refugee Stories</h1>
+      <Gallery
+        style={{
+          //add styles like height, width, or opacity here for the pictures or background. 
+          height: '100%',
+          //  width: '100vw',
+          background: '#1fc8db '
+        }}
+        index={index}
+        onRequestChange={i => {
+          setIndex(i);
+        }}
+        >
+          {/* test images - can be changed */}
+        {images.map(image => (
+          <GalleryImage objectFit="contain" src={image} />
+        ))}
+    </Gallery>
+   </>
   );
 }
 

@@ -12,11 +12,9 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
 .App-link {
   color: #61dafb;
 }
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -28,6 +26,33 @@
 
 body {
   background: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  border-bottom: 1px solid #efefef;
+  margin-bottom: 32px;
+  background-color: #e3e3e3;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 2rem;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #1a2246;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  border-bottom: 1px solid #1c5d76;
 }
 
 .container {
@@ -53,7 +78,6 @@ body {
   justify-content: center;
   align-items: center;
 }
-
 .card img {
   width: 150px;
   height: 150px;
@@ -72,8 +96,8 @@ body {
   width: 80%;
   height: 500px;
 }
-
 .textarea {
   width: 90%;
   height: 350px
 }
+
