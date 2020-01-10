@@ -1,21 +1,22 @@
-import React from 'react';
-import { PubContext } from '../contexts/PubStories';
+import React, { useState, useEffect } from "react";
+import StoryCard from "../components/StoryCard";
+import data from "../data";
+import StoriesCarousel from "./StoriesCarousel";
 
-const Stories = props => {
-    const story = React.useContext(PubContext)
+const Stories = () => {
+  const [stories, setStories] = useState([]);
 
-    return (
-        <>
-            {story.map(stuff => (
-                <div>
-                                    <p>{stuff.name}</p>
-                <p>{stuff.story}</p>
-                <p>{stuff.quote}</p>
-                </div >
-            ))}
-        </> 
-    )
-}
-   
+  useEffect(() => {
+    setStories(data);
+  });
+
+  return (
+    <div>
+      {stories.map((story) => (
+        <StoryCard key={story.id} story={story} />
+      ))}
+    </div>
+  );
+};
 
 export default Stories;

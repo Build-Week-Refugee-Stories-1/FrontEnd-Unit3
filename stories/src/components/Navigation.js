@@ -1,14 +1,14 @@
 import React from "react";
 import "./styles.css";
 
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   return (
     <nav>
       <div className="nav-links">
-        <Link to="/HomePage">Homee</Link>
-        <Link to="/Stories">Stories</Link>
+        <Link to="/">Home</Link>
+        <Link to="/stories">Stories</Link>
         <Link to="/Login">Login</Link>
       </div>
     </nav>
