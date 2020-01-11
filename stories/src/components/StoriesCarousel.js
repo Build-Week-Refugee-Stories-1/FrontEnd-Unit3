@@ -28,7 +28,7 @@ function Carousel() {
           //add styles like height, width, or opacity here for the pictures or background. 
           height: '100%',
           //  width: '100vw',
-          background: '#1fc8db '
+          background: 'linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);'
         }}
         index={index}
         onRequestChange={i => {

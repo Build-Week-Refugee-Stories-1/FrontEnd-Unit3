@@ -8,10 +8,9 @@ const Stories = props => {
   return (
     <>
       <Container>
-        <h1>Refugee Stories</h1>
         <Card fluid>
           <Card.Content>
-            <Card.Header>Recently Submitted Stories</Card.Header>
+            <Card.Header><h1>Recently Submitted Stories</h1></Card.Header>
           </Card.Content>
           <Card.Content>
             <Grid columns={4}>
