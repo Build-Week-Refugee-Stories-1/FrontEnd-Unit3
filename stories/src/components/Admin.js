@@ -38,7 +38,7 @@ const Admin = props => {
         <>
             <Navigation />
             <Container>
-                <h1>Refugee Stories</h1>
+                <h1>Admin Page</h1>
                 <Card fluid>
                     <Card.Content>
                         <Grid columns={4}>
