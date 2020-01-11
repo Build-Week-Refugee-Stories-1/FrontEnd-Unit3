@@ -41,7 +41,7 @@ nav {
 .nav-links {
   display: flex;
   justify-content: space-evenly;
-  margin: 2rem;
+  margin: 1.5rem;
 }
 .nav-links a {
   text-decoration: none;
@@ -67,7 +67,6 @@ nav {
 
 .card {
   width: 100%;
-  /* padding: 20px; */
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
