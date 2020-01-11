@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Navigation from './Navigation';
-import axios from 'axios';
+import { axiosWithAuth } from "../axiosWithAuth";
 
 const Login = props => {
   const [credentials, setCredentials] = useState({
@@ -11,7 +11,7 @@ const Login = props => {
   const login = e => {
     e.preventDefault();
 
-    axios
+    axiosWithAuth()
       .post('http://localhost:5000/api/login', credentials)
       .then(res => {
         console.log("cd: Login.js: Login: login then: res: ", res);

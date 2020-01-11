@@ -30,6 +30,7 @@ const Stories = props => {
                       <Card.Content>
                         <Card.Header>"{stuff.quote}"</Card.Header>
                       </Card.Content>
+                      <br />
                     </Card>
                   </Grid.Column>
                 ))}
