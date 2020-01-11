@@ -22,7 +22,7 @@ const SubmitStories = props => {
           value={state.story} placeholder="Submit your story here"  /> 
           <br />
           <input type="file" id="avatar" accept="image/png, image/jpeg" 
-            onChange={(e) => {setState({...state, story: e.target.value})}}
+            onChange={(e) => {setState({...state, image: e.target.value})}}
             value={state.image}  /> 
             <br />
           <button onClick={(e) => {
