@@ -10,17 +10,18 @@ const Login = (props) => {
 
   const login = (e) => {
     e.preventDefault();
-
-    axios
-      .post('http://localhost:5000/api/login', credentials)
-      .then(res => {
-        console.log("cd: Login.js: Login: login then: res: ", res);
-        localStorage.setItem("token", res.data.payload);
-        props.history.push("/") // <== Change the route once component is made
-      })
-      .catch((err) =>
-        console.log("cd: Login.js: Login: login then: err: ", err.message)
-      );
+    props.history.push("/portal")
+    // axios
+    //   .post('http://localhost:5000/api/login', credentials)
+    //   .then(res => {
+    //     console.log("cd: Login.js: Login: login then: res: ", res);
+    //     localStorage.setItem("token", res.data.payload);
+    //      // <== Change the route once component is made
+    //   })
+    //   .catch((err) =>
+    //     console.log("cd: Login.js: Login: login then: err: ", err.message)
+    //   );
+    // This is totally the code I'd have used to log in if we had a backend.
   };
 
   const handleChange = (e) => {

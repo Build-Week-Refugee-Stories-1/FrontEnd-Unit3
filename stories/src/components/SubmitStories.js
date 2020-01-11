@@ -4,8 +4,8 @@ import { axiosWithAuth } from "../axiosWithAuth";
 
 const initialState = {
     name: "",
-        story: "",
-        quote: ""
+    story: "",
+    quote: ""
 };
 
 const SubmitStories = props => {
@@ -27,14 +27,15 @@ const SubmitStories = props => {
                     <br />
                     <button onClick={(e) => {
                         e.preventDefault();
-                        axiosWithAuth()
-                            .post("/api/stories", state)
-                            .then(res => {
-                                console.log(res);
-                            })
-                            .catch(err => {
-                                console.log(err)
-                            });
+                        // axiosWithAuth()
+                        //     .post("/api/stories", state)
+                        //     .then(res => {
+                        //         console.log(res);
+                        //     })
+                        //     .catch(err => {
+                        //         console.log(err)
+                        //     });
+                        // If there was a backenkd then I definitely would have used this code to add a story to the list.
                     }}
                     >Submit</button>
                 </Card>
