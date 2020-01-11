@@ -25,6 +25,10 @@ const SubmitStories = props => {
                     <textarea className="submitquote" onChange={(e) => { setState({ ...state, quote: e.target.value }) }}
                         value={state.quote} placeholder="Place a powerful quote here" />
                     <br />
+                    <input type="file" id="avatar" accept="image/png, image/jpeg"
+                        onChange={(e) => { setState({ ...state, image: e.target.value }) }}
+                        value={state.image} />
+                    <br />
                     <button onClick={(e) => {
                         e.preventDefault();
                         // axiosWithAuth()
