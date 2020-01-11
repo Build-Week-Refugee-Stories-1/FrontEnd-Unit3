@@ -4,11 +4,14 @@ import { Grid, Card, Container, Image } from "semantic-ui-react";
 
 const Stories = props => {
   const story = React.useContext(PubContext);
+
   return (
     <>
       <Container>
-        <h1>Refugee Stories</h1>
         <Card fluid>
+          <Card.Content>
+            <Card.Header><h1>Recently Submitted Stories</h1></Card.Header>
+          </Card.Content>
           <Card.Content>
             <Grid columns={4}>
               <Grid.Row>
@@ -27,6 +30,7 @@ const Stories = props => {
                       <Card.Content>
                         <Card.Header>"{stuff.quote}"</Card.Header>
                       </Card.Content>
+                      <br />
                     </Card>
                   </Grid.Column>
                 ))}
@@ -38,6 +42,7 @@ const Stories = props => {
     </>
   );
 };
+
 export default Stories;
 
 

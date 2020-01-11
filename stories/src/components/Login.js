@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import Navigation from './Navigation';
-import axios from 'axios';
+import { axiosWithAuth } from "../axiosWithAuth";
 
-const Login = (props) => {
+const Login = props => {
   const [credentials, setCredentials] = useState({
     username: "",
     password: ""
   });
 
-  const login = (e) => {
+  const login = e => {
     e.preventDefault();
     props.history.push("/portal")
     // axios
@@ -24,14 +24,14 @@ const Login = (props) => {
     // This is totally the code I'd have used to log in if we had a backend.
   };
 
-  const handleChange = (e) => {
+  const handleChange = e => {
     setCredentials({
       ...credentials,
       [e.target.name]: e.target.value
     });
   };
 
-  return (
+  return(
     <div>
       <Navigation />
       <h1>Refugee Stories</h1>
