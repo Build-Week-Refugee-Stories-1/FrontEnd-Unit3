@@ -4,7 +4,7 @@ import Stories from './Stories';
 import Carousel from './StoriesCarousel';
 import SubmitStories from './SubmitStories';
 import { PubContext } from '../contexts/PubStories';
-import axios from 'axios';
+
 
 import data from '../data';
 

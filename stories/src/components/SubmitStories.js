@@ -6,7 +6,8 @@ const SubmitStories = props => {
   const [state, setState] = useState({
     name: "",
     story:"",
-    quote:""
+    quote:"",
+    image: ""
   });
   console.log(state)
   return (
@@ -20,6 +21,10 @@ const SubmitStories = props => {
           <textarea className="textarea" onChange={(e) => {setState({...state, story: e.target.value})}} 
           value={state.story} placeholder="Submit your story here"  /> 
           <br />
+          <input type="file" id="avatar" accept="image/png, image/jpeg" 
+            onChange={(e) => {setState({...state, story: e.target.value})}}
+            value={state.image}  /> 
+            <br />
           <button onClick={(e) => {
             e.preventDefault();
             axiosWithAuth()
