@@ -15,7 +15,7 @@ const Login = props => {
       .then(res => {
         console.log("cd: Login.js: Login: login then: res: ", res);
         localStorage.setItem("token", res.data.payload);
-        props.history.push("/admin") // <== Change the route once component is made
+        props.history.push("/") // <== Change the route once component is made
       })
       .catch(err =>
         console.log("cd: Login.js: Login: login then: err: ", err.message)

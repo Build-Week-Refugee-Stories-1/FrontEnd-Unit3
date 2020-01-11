@@ -7,21 +7,22 @@ import { PubContext } from '../contexts/PubStories';
 import axios from 'axios';
 
 import data from '../data';
+import { axiosWithAuth } from "../axiosWithAuth";
 
 
 const Home = () => {
     const [pub, setPub] = React.useState([]);
 
     React.useEffect(() => {
-        // axiosWithAuth()
-        //   .get('/colors')
-        //   .then(res => 
-        //     console.log("getting data", res)
-        //     // setPub(res.data)
-        //     )
-        //   .catch(err => console.log(err.message));
+        axiosWithAuth()
+        .get('/api/stories')
+          .then(res => {
+            console.log("getting data", res);
+            setPub(res.data)
+          })
+          .catch(err => console.log("getting data", err.message));
 
-        setPub([...data]);
+        // setPub([...data]);
     }, []);
 
 
