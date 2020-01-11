@@ -11,12 +11,12 @@ const Login = props => {
   const login = e => {
     e.preventDefault();
     props.history.push("/portal")
-    // axios
+    // axiosWithAuth()
     //   .post('http://localhost:5000/api/login', credentials)
     //   .then(res => {
     //     console.log("cd: Login.js: Login: login then: res: ", res);
     //     localStorage.setItem("token", res.data.payload);
-    //      // <== Change the route once component is made
+    //     props.history.push("/portal") // <== Change the route once component is made
     //   })
     //   .catch((err) =>
     //     console.log("cd: Login.js: Login: login then: err: ", err.message)
