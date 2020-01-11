@@ -1,22 +1,22 @@
 import React, { useState } from "react";
 import Navigation from './Navigation';
-import axios from 'axios';
+import { axiosWithAuth } from "../axiosWithAuth";
 
-const Login = (props) => {
+const Login = props => {
   const [credentials, setCredentials] = useState({
     username: "",
     password: ""
   });
 
-  const login = (e) => {
+  const login = e => {
     e.preventDefault();
     props.history.push("/portal")
-    // axios
+    // axiosWithAuth()
     //   .post('http://localhost:5000/api/login', credentials)
     //   .then(res => {
     //     console.log("cd: Login.js: Login: login then: res: ", res);
     //     localStorage.setItem("token", res.data.payload);
-    //      // <== Change the route once component is made
+    //     props.history.push("/portal") // <== Change the route once component is made
     //   })
     //   .catch((err) =>
     //     console.log("cd: Login.js: Login: login then: err: ", err.message)
@@ -24,14 +24,14 @@ const Login = (props) => {
     // This is totally the code I'd have used to log in if we had a backend.
   };
 
-  const handleChange = (e) => {
+  const handleChange = e => {
     setCredentials({
       ...credentials,
       [e.target.name]: e.target.value
     });
   };
 
-  return (
+  return(
     <div>
       <Navigation />
       <h1>Refugee Stories</h1>
