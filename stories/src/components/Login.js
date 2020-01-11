@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import Navigation from './Navigation';
 import axios from 'axios';
 
-const Login = (props) => {
+const Login = props => {
   const [credentials, setCredentials] = useState({
     username: "",
     password: ""
   });
 
-  const login = (e) => {
+  const login = e => {
     e.preventDefault();
 
     axios
@@ -18,19 +18,19 @@ const Login = (props) => {
         localStorage.setItem("token", res.data.payload);
         props.history.push("/admin") // <== Change the route once component is made
       })
-      .catch((err) =>
+      .catch(err =>
         console.log("cd: Login.js: Login: login then: err: ", err.message)
       );
-  };
+    };
 
-  const handleChange = (e) => {
+  const handleChange = e => {
     setCredentials({
       ...credentials,
       [e.target.name]: e.target.value
     });
   };
 
-  return (
+  return(
     <div>
       <Navigation />
       <h1>Refugee Stories</h1>

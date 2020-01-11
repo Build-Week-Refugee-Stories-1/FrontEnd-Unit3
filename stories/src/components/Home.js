@@ -26,12 +26,13 @@ const Home = () => {
 
 
     return (
-        <PubContext.Provider value={pub}>
-            <Navigation />
-            <Carousel />
-            <Stories />
-            <SubmitStories />
-        </PubContext.Provider>
+          <PubContext.Provider value={pub}>
+              <Navigation />
+              
+              <Carousel />
+              <Stories />
+              <SubmitStories />
+          </PubContext.Provider>
     )
 }
 
