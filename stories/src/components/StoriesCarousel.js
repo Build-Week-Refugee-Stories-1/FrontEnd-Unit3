@@ -12,41 +12,43 @@ function Carousel() {
   // This code will cyclye thru the carousel every 3.5 seconds
   React.useEffect(() => {
     const interval = setInterval(() => {
-      if(index === images.length -1) {
+      if (index === images.length - 1) {
         setIndex(initialIndex)
       } else {
         setIndex(index + 1)
-      } 
+      }
     }, 5500)
     return () => clearInterval(interval)
-    }, [index])
+  }, [index])
 
   return (
-    //Start of the Carousel
-    <Gallery
-      style={{
-        //add styles like height, width, or opacity here for the pictures or background. 
-        height: '100vh',
-        width: '100vw',
-        background: 'black'
-      }}
-      index={index}
-      onRequestChange={i => {
-        setIndex(i);
-      }}
-    >
-      {/* test images - can be changed */}
-      {story.map(image => (
-        <>
-          <GalleryImage objectFit="contain" src={image.image} />
-          <p>{image.quote}</p>
-        </>
-      ))
+    <>
+      <h1>Refugee Stories</h1>
       
-      }
+      <Gallery
+        style={{
+          //add styles like height, width, or opacity here for the pictures or background. 
+          height: '500px',
+          // width: '100vw',
+          background: "linear-gradient(141deg, #9FB8AD 0%, #1FC8DB 51%, #2CB5E8 75%);"
+        }}
+        index={index}
+        onRequestChange={i => {
+          setIndex(i);
+        }}
+      >
+        {/* test images - can be changed */}
+        {story.map(image => (
+          <>
+            <GalleryImage objectFit="contain" src={image.image} />
+            <p>{`"${image.quote}" - ${image.name}`}</p>
+          </>
+        ))
 
-    </Gallery>
+        }
 
+      </Gallery>
+    </>
   );
 }
 

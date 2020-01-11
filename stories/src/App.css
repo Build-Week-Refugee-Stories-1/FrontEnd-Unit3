@@ -65,6 +65,13 @@ nav {
   border-top: 1px solid gray
 }
 
+p {
+  text-align: center;
+  font-weight: bold;
+  font-size: large;
+  text-transform: capitalize;
+}
+
 .card {
   width: 100%;
   display: flex;
@@ -79,7 +86,6 @@ nav {
   align-items: center;
 }
 .card img {
-  width: 150px;
   height: 150px;
   border-radius: 3px;
   margin-right: 20px;
