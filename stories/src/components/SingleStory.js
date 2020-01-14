@@ -7,14 +7,14 @@ const SingleStory = (props) => {
   const { id } = props.match.params;
 
   useEffect(() => {
-    setStory(data.filter((story) => story.id === Number(id))[0]);
+    setStory(props.location.state.story);
   }, []);
 
   console.log(story);
   return (
     <div>
-      <h2>{story.name}</h2>
-      <p>{story.story}</p>
+      <h2>{story.title}</h2>
+      <p>{story.description}</p>
     </div>
   );
 };

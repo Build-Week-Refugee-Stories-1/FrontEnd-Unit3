@@ -8,9 +8,13 @@ const StoryCard = ({ story }) => {
     <Card>
       <CardBody className="text-left">
         <CardTitle>
-          <Link to={`/story/${story.id}`}>{story.name}</Link>
+          <Link
+            to={{ pathname: `/story/${story.id}`, state: { story: story } }}
+          >
+            {story.title}
+          </Link>
         </CardTitle>
-        <CardText>{story.quote}</CardText>
+        <CardText>{story.description}</CardText>
       </CardBody>
     </Card>
   );
